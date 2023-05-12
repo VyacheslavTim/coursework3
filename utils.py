@@ -85,7 +85,7 @@ def get_comments_by_post_id(comment_data, id_post):
     output_post = []
     is_exists = False
     for post in comment_data:
-        if id_post == comment_data["post_id"]:
+        if id_post == post["post_id"]:
             is_exists = True
             output_post.append(post)
 
@@ -120,7 +120,7 @@ def search_for_posts(posts_data, query):
 
 def get_tags(post):
     tags = []
-    text = post["context"].split(" ")
+    text = post["content"].split(" ")
     for word in text:
         if "#" in word:
             tag = word.replace("#", "")

@@ -18,7 +18,7 @@ def main_page():
     return render_template("index.html", posts=posts_data, bookmarks_quantity=bookmarks_quantity)
 
 
-@app.route("/post/<post_id>")
+@app.route("/post/<postid>")
 def post_page(postid):
     posts_data = utils.open_json("data/posts.json")
     comments_data = utils.open_json("data/comments.json")

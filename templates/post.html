@@ -28,7 +28,7 @@
     <section class="items">
       <div class="items__item item item--post">
         <div class="item__top">
-          <a href="/users/{{ post/poster_name }}" class="item__head">
+          <a href="/users/{{ post.poster_name }}" class="item__head">
             <div class="item__ava-wrap">
               <img src={{ post.poster_avatar }} alt="" class="item__ava" width="47">
             </div>
@@ -60,7 +60,7 @@
             </div>
           </div>
           <div class="item__comments">
-            {% for coment in comments %}
+            {% for comment in comments %}
             <p class="item__comment">
               <b>{{ comment.commenter_name }}:</b> {{ comment.comment }}
             </p>
